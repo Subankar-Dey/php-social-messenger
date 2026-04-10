@@ -1,4 +1,4 @@
-````markdown
+
 # 💬 PHP Social Messenger
 
 **PHP Social Messenger** is a powerful, **real-time messaging** platform designed for seamless communication. It features a modern, responsive interface built with **PHP, MySQL, and AJAX** to ensure instant message delivery without page reloads. Whether you're managing a contact list, blocking unwanted users, or updating your digital identity, this app handles it all with a smooth, native feel.
@@ -58,15 +58,10 @@ Update your database credentials in your connection file (usually `config.php` o
 
 ```php
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$dbname = "social_messenger_db";
-
-$conn = mysqli_connect($hostname, $username, $password, $dbname);
-if(!$conn){
-    echo "Database connection error" . mysqli_connect_error();
-}
+define("DB_SERVER", "localhost");
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "");
+define("DB_NAME", "social_messenger_db");
 ?>
 ```
 
@@ -113,4 +108,3 @@ Contributions make the open-source community an amazing place\!
 **Developed with ❤️ by [Subankar Dey](https://www.google.com/search?q=https://github.com/Subho1434)**
 
 ```
-```#
