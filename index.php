@@ -19,7 +19,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </head>
 
 <body>
-    <!-- Profile Modal: Only 1 Image (Preview), Responsive, and Clean -->
+    <!-- Profile Modal -->
     <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -31,7 +31,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 </div>
                 <div class="modal-body">
                     <div class="profile-img-preview">
-                        <img src="./src/images/profile-picture/default.png" id="modalProfilePicture" alt="Profile Preview">
+                        <!-- Added onerror fallback here -->
+                        <img src="./src/images/profile-picture/default.png" id="modalProfilePicture" onerror="this.onerror=null; this.src='./src/images/profile-picture/default.jpg';" alt="Profile Preview">
                     </div>
                     <form id="profile-form" method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="form-group mb-3">
@@ -82,6 +83,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
         </div>
     </div>
+    
     <!-- Main Chat Layout -->
     <div class="container-fluid h-100">
         <div class="row justify-content-center h-100">
@@ -147,7 +149,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         document.getElementById('username').value = username;
                         const profilePic = profile_picture && profile_picture !== 'default.png' ?
                             './src/images/profile-picture/' + profile_picture :
-                            './src/images/profile-picture/default.png';
+                            './src/images/profile-picture/default.jpg';
                         document.getElementById('modalProfilePicture').src = profilePic;
                     }
                 });
@@ -248,7 +250,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             listItem.innerHTML = `
                                 <div class="d-flex bd-highlight">
                                     <div class="img_cont">
+                                        <!-- ADDED ONERROR FALLBACK HERE -->
                                         <img src="./src/images/profile-picture/${user.profile_picture}" 
+                                            onerror="this.onerror=null; this.src='./src/images/profile-picture/default.jpg';" 
                                             class="rounded-circle user_img" 
                                             alt="${user.full_name}">
                                     </div>
