@@ -25,10 +25,10 @@
 
 ## 🛠 Default Users (Demo Data)
 
-| 👤 Full Name | 🔑 Username | 📝 Role |
-| :--- | :--- | :--- |
-| **Subankar Dey** | `subho11` | Developer / Admin |
-| **Fayaz Ali** | `fayaz1` | Test User |
+| 👤 Full Name | Username | 📝 Role | 🔑 Password |
+| :--- | :--- | :--- | :--- |
+| **Subankar Dey** | `subho` | Developer / Admin | aaaa |
+| **Fayaz Ali** | `ashfaq` | Test User | aaaa |
 
 > **Note:** All demo accounts use the same hashed password from the SQL dump.
 
