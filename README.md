@@ -29,7 +29,6 @@
 | :--- | :--- | :--- |
 | **Subankar Dey** | `subho11` | Developer / Admin |
 | **Fayaz Ali** | `fayaz1` | Test User |
-| **Saniya Mirza** | `saniya` | Test User |
 
 > **Note:** All demo accounts use the same hashed password from the SQL dump.
 
