@@ -42,7 +42,7 @@ Follow these steps to set up the messenger on your local XAMPP/WAMP environment:
 
 ### 1️⃣ Clone & Navigate
 ```bash
-git clone [https://github.com/Subho1434/php-social-messenger.git](https://github.com/Subho1434/php-social-messenger.git)
+git clone https://github.com/Subankar-Dey/php-social-messenger.git
 cd php-social-messenger
 ````
 
@@ -105,6 +105,6 @@ Contributions make the open-source community an amazing place\!
 
 -----
 
-**Developed with ❤️ by [Subankar Dey](https://www.google.com/search?q=https://github.com/Subho1434)**
+**Developed with ❤️ by [Subankar Dey](https://github.com/Subankar-Dey/)**
 
 ```
